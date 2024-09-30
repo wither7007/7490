@@ -1,0 +1,4 @@
+  WARNING: The script pygmentize is installed in '/home/steff007/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The scripts ipython and ipython3 are installed in '/home/steff007/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.

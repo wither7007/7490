@@ -1,0 +1,16 @@
+hs
+PROMPT='%(?.%F{blue}⏺.%F{red}⏺)%f %2~ > '
+mps
+PROMPT='%(?.%F{blue}{red})%f %2~ > '
+PROMPT='%(?.%F}{red})%f %2~ > '
+PROMPT='{red})%f %2~ > '
+qqq
+ehis
+tmux
+his
+als
+h1
+v .zsh
+v .zshrc
+exit
+echo $0
