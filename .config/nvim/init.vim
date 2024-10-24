@@ -131,6 +131,7 @@ noremap <leader>w :wqa<cr>
 noremap <leader>s :w:!source %
 noremap <leader>n :enew
 vnoremap <leader>b "_x
+noremap <leader>m :%s///g
 let g:user_emmet_leader_key=','
 map <C-V>      "+gP
 "--Emmet config

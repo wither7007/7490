@@ -3,6 +3,7 @@
 
 ### Node ###
 #media files
+/.gnupg/
 /.npm
 /.cache
 /.ssh

@@ -8,6 +8,22 @@ export FZF_DEFAULT_COMMAND='fd . -tf -d 1 '
 #  printf '%s\n' "fd  -H -I "
 #  fd  -H -I
 #}
+myip(){
+curl ifconfig.me
+}
+fdh(){
+/usr/bin/fdfind --help | nvim 
+}
+fdi(){
+fd  -H -I
+}
+wind(){
+  #convert bash path to windows
+pwd | sed 's.\/mnt\/c.c:.g' |clip.exe
+}
+gitfiles(){
+git ls-files
+}
 listen(){
 netstat -tulpn | grep LISTEN
 }
@@ -19,9 +35,6 @@ wslpath -w $PWD | clip.exe
 }
 dr(){
   docker run -i -t "$1"
-}
-h1(){
-  history 1 |tac |cut -c 1-7 --complement | nvim -
 }
 all(){
   cd /mnt/c/all
@@ -317,7 +330,7 @@ cham() {
   fdm -tf -L --changed-within="$1"minutes |  xargs stat -c "%y/%n" | sort | sed -e "s/[0-9]*\:.*00\///g"
 }
 hit() {
-  history | tail -n "$1"
+  history | tail -n 20
 }
 
 #https://raw.githubusercontent.com/nickjj/dotfiles/master/.config/zsh/.aliases
@@ -384,4 +397,8 @@ mkcd() {
     mkdir -p $@ && cd $@;
 }
 
+
+h(){
+  history 1 |tac |cut -c 1-7 --complement | nvim -
+}
 export PATH=$PATH:/home/steff007/.local/bin
