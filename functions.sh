@@ -8,6 +8,11 @@ export FZF_DEFAULT_COMMAND='fd . -tf -d 1 '
 #  printf '%s\n' "fd  -H -I "
 #  fd  -H -I
 #}
+wpath(){
+
+wslpath -w $(pwd) 
+wslpath -w $(pwd) | clip.exe
+}
 myip(){
 curl ifconfig.me
 }

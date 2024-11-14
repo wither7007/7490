@@ -23,22 +23,84 @@
 # Registers:
 
 # File marks:
-'0  3  0  /usr/share/vim/vim82/doc/help.txt
-|4,48,3,0,1726272756,"/usr/share/vim/vim82/doc/help.txt"
-'1  1  0  /usr/share/vim/vim82/doc/help.txt
-|4,49,1,0,1726272733,"/usr/share/vim/vim82/doc/help.txt"
-'2  1  0  /usr/share/vim/vim82/doc/help.txt
-|4,50,1,0,1726272722,"/usr/share/vim/vim82/doc/help.txt"
+'0  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,48,1,0,1731018505,"/usr/share/vim/vim82/doc/help.txt"
+'1  61  0  /usr/share/vim/vim82/doc/help.txt
+|4,49,61,0,1731018486,"/usr/share/vim/vim82/doc/help.txt"
+'2  3  0  /usr/share/vim/vim82/doc/help.txt
+|4,50,3,0,1726272756,"/usr/share/vim/vim82/doc/help.txt"
+'3  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,51,1,0,1726272733,"/usr/share/vim/vim82/doc/help.txt"
+'4  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,52,1,0,1726272722,"/usr/share/vim/vim82/doc/help.txt"
 
 # Jumplist (newest first):
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1731018505,"/usr/share/vim/vim82/doc/help.txt"
+-'  61  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,61,0,1731018486,"/usr/share/vim/vim82/doc/help.txt"
+-'  61  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,61,0,1731018486,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1731018469,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1731018469,"/usr/share/vim/vim82/doc/help.txt"
 -'  3  0  /usr/share/vim/vim82/doc/help.txt
 |4,39,3,0,1726272756,"/usr/share/vim/vim82/doc/help.txt"
+-'  3  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,3,0,1726272756,"/usr/share/vim/vim82/doc/help.txt"
+-'  3  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,3,0,1726272756,"/usr/share/vim/vim82/doc/help.txt"
+-'  3  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,3,0,1726272756,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272750,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272750,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272750,"/usr/share/vim/vim82/doc/help.txt"
 -'  1  0  /usr/share/vim/vim82/doc/help.txt
 |4,39,1,0,1726272750,"/usr/share/vim/vim82/doc/help.txt"
 -'  1  0  /usr/share/vim/vim82/doc/help.txt
 |4,39,1,0,1726272733,"/usr/share/vim/vim82/doc/help.txt"
 -'  1  0  /usr/share/vim/vim82/doc/help.txt
 |4,39,1,0,1726272733,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272733,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272733,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272733,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272733,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272733,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272733,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272722,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272722,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272722,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272722,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272722,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272722,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272722,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272722,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272722,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272722,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272722,"/usr/share/vim/vim82/doc/help.txt"
+-'  1  0  /usr/share/vim/vim82/doc/help.txt
+|4,39,1,0,1726272722,"/usr/share/vim/vim82/doc/help.txt"
 -'  1  0  /usr/share/vim/vim82/doc/help.txt
 |4,39,1,0,1726272722,"/usr/share/vim/vim82/doc/help.txt"
 -'  1  0  /usr/share/vim/vim82/doc/help.txt
@@ -51,8 +113,14 @@
 # History of marks within files (newest to oldest):
 
 > /usr/share/vim/vim82/doc/help.txt
-	*	1726272755	0
-	"	3	0
+	*	1731018496	0
+	"	1	0
+
+> /tmp/ipython_edit_92catcnn/ipython_edit_0babzz8e.py
+	"	1	0
+
+> /tmp/ipython_edit_pa_ktd21/ipython_edit_xvkpn3xm.py
+	"	1	0
 
 > /tmp/ipython_edit_j1iinpue/ipython_edit_ynh_zew8.py
 	"	1	0
