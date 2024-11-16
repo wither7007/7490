@@ -1,5 +1,21 @@
 " Vim with all enhancements
-
+let mapleader = ","
+nnoremap <leader>p :pu=execute('ls')
+nnoremap <Leader>f :NERDTreeToggle<Enter>
+nnoremap <Leader>x :bd!
+nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>c :close!
+nnoremap <leader> <Space> :nohlsearch<Bar>:echo<CR>
+noremap <leader>l ^vg_y
+noremap <leader>q :qa!<cr>
+noremap <leader>w :wqa<cr>
+noremap <leader>n :enew
+vnoremap <leader>b "_x
+noremap <leader>m gg:%s///
+noremap <leader>; v$y
+let g:user_emmet_leader_key=','
+"map <C-V>      "+gP
+"noremap <leader>s :w:!source %
 "weird puts this first  1 %    "~/.config/nvim/init.vim"      line 1
 
 "source $VIMRUNTIME/vimrc_example.vim
@@ -118,22 +134,6 @@ map gn :bn<cr>
 map gp :bp<cr>
 map <silent> <C-t> :NERDTreeFocus<CR>
 
-let mapleader = ","
-nnoremap <leader>p :pu=execute('ls')
-nnoremap <Leader>f :NERDTreeToggle<Enter>
-nnoremap <Leader>x :bd!
-nnoremap <leader>t :tabnew<CR>
-nnoremap <leader>c :close!
-nnoremap <leader> <Space> :nohlsearch<Bar>:echo<CR>
-noremap <leader>l ^vg_y
-noremap <leader>q :qa!<cr>
-noremap <leader>w :wqa<cr>
-noremap <leader>s :w:!source %
-noremap <leader>n :enew
-vnoremap <leader>b "_x
-noremap <leader>m :%s///g
-let g:user_emmet_leader_key=','
-map <C-V>      "+gP
 "--Emmet config
 "redefine trigger key
 "map ctrl c and v to windows

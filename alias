@@ -25,7 +25,6 @@ alias f1='fd --changed-within 2day'
 alias fda="fd -tf -I -d 1 -a --no-ignore-vcs "
 alias fdc="fd -H -I -d 1  -td | column"
 alias fdf="fd -H -I -d 1  -tf | column"
-alias fdm="fdi --ignore-file ~/.fdignore"
 alias fdir="fd -H -I . "
 alias fm='vifm'
 alias fp='find `pwd` -name '

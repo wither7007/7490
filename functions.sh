@@ -22,6 +22,10 @@ fdh(){
 fdi(){
 fd  -H -I
 }
+
+fdm(){
+  fdi --ignore-file ~/.fdignore
+}
 wind(){
   #convert bash path to windows
 pwd | sed 's.\/mnt\/c.c:.g' |clip.exe
