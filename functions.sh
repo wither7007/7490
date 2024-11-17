@@ -24,7 +24,7 @@ fd  -H -I
 }
 
 fdm(){
-  fdi --ignore-file ~/.fdignore
+  fd -H -I --ignore-file ~/.fdignore
 }
 wind(){
   #convert bash path to windows
@@ -186,13 +186,7 @@ unq() {
 tw() {
   fdm --changed-within="$1"days | xargs ls -lhrt | awk '{ print $9 ": " $6 " " $7 " " $8}' | sort -k3
 }
-recv() {
-  fdm --changed-within="$1"days | xargs ls -lhrt | awk '{ print $9 " " $6 " " $7 " " $8}' | tac | sort | nvim -
-}
 
-recf() {
-  fdm --changed-within="$1"days | xargs ls -lhrt | awk '{ print $9 " " $6 " " $7 " " $8}' | tac | sort >/mnt/c/projects/left.txt
-}
 form() {
   fmt -w 120 "$1" | nvim -
 }
@@ -261,7 +255,7 @@ frec() {
 }
 
 recf() {
-  fdi --changed-within="$1"hours --ignore-file ~/.fdignore -x ls -lhr | cut -d' ' -f5-13
+  fd -H -I --changed-within="$1"hours --ignore-file ~/.fdignore -x ls -lhr | cut -d' ' -f5-13
 }
 cputest() {
   sysbench cpu run >~/cputest/"$(date | sed 's/\s/_/g' | sed 's/_C.*//g')"cpu.txt
