@@ -8,16 +8,17 @@ export FZF_DEFAULT_COMMAND='fd . -tf -d 1 '
 #  printf '%s\n' "fd  -H -I "
 #  fd  -H -I
 #}
-wpath(){
-
-wslpath -w $(pwd) 
-wslpath -w $(pwd) | clip.exe
+myc() {
+cd /mnt/c || exit
+}
+mpath(){
+wslpath -w "$(pwd)" | clip.exe
 }
 myip(){
 curl ifconfig.me
 }
 fdh(){
-/usr/bin/fdfind --help | nvim 
+  /usr/bin/fdfind --help | nvim 
 }
 fdm(){
   fd -H -I --ignore-file ~/.fdignore
@@ -33,23 +34,23 @@ listen(){
 netstat -tulpn | grep LISTEN
 }
 dstop(){
-docker stop $(docker ps -a -q)
+docker stop "$(docker ps -a -q)"
 }
 wslp(){
-wslpath -w $PWD | clip.exe
+wslpath -w "$PWD" | clip.exe
 }
 dr(){
   docker run -i -t "$1"
 }
 all(){
-  cd /mnt/c/all
+  cd /mnt/c/all || exit
 }
 h(){
   history 1  |cut -c 1-7 --complement | tail -n20
 }
 hst()
 {  
-  history -$1 -1
+  history -"$1" -1
 }
 env() 
 {
@@ -81,7 +82,7 @@ fdm -ejs | xargs -r rg -i --max-count 2 "$1"
 }
 house()
 {
-cd /mnt/c/projects/house/
+cd /mnt/c/projects/house/ || exit
 nvim /mnt/c/projects/house/todos.txt
 }
 
@@ -89,7 +90,7 @@ gitweb()
 {
 #py script to web format git remote -v 
 #depends on /mnt/c/projects/script/gitr.py
-gitr.py $(git ls-remote --get-url)
+gitr.py $"(git ls-remote --get-url)"
 }
 gitp()
   #quick commit and push
@@ -210,7 +211,7 @@ pqle() {
 gitinit() {
   gignore
   k='git init -b main && git add -A && git commit -m "Initial commit"'
-  echo $k
+  echo "$k"
   bash -c "$k"
 }
 qm() {
@@ -266,8 +267,8 @@ wind() {
 }
 winfile() {
   #convert linux name win for one arg
-  fd -a $1 | sed 's.\/mnt\/c.c\:.' | sed 's.\/.\\.g'
-  fd -a $1 | sed 's.\/mnt\/c.c\:.' | sed 's.\/.\\.g' | cl
+  fd -a "$1" | sed 's.\/mnt\/c.c\:.' | sed 's.\/.\\.g'
+  fd -a "$1" | sed 's.\/mnt\/c.c\:.' | sed 's.\/.\\.g' | cl
 }
 ltv() {
   ls -lhrt | awk '{print $9}' | nvim -

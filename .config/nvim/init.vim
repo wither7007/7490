@@ -115,14 +115,14 @@ endif
 "set hlsearch
 "set search highlight
 "set toggle space
-"call plug#begin()
+call plug#begin()
 " Plug 'davidhalter/jedi-vim'
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'numToStr/Comment.nvim'
 "Plug 'b3nj5m1n/kommentary'
 "Plug 'https://github.com/davidhalter/jedi-vim'
 "Plug 'https://github.com/jiangmiao/auto-pairs'
-"Plug 'https://github.com/tpope/vim-commentary'
+Plug 'https://github.com/tpope/vim-commentary'
 "Plug 'https://tpope.io/vim/sensible.git'
 "Plug 'mattn/emmet-vim'
 "Plug 'mattn/emmet-vim'
@@ -131,7 +131,7 @@ endif
 "Plug 'vim-scripts/bash-support.vim'
 "Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 "Plug 'https://github.com/scrooloose/nerdtree'
-"Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'https://github.com/vim-airline/vim-airline'
 "Plug 'itchyny/lightline.vim'
 "Plug 'jpalardy/vim-slime', { 'for': 'python' }
 "Plug 'jupyter-vim/jupyter-vim'
@@ -140,7 +140,7 @@ endif
 "Plug 'preservim/nerdcommenter'
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 "Plug 'scrooloose/syntastic'
-"call plug#end()
+call plug#end()
 "lua require('Comment').setup()
 colorscheme elflord
 hi Search guibg=peru guifg=wheat
@@ -232,3 +232,30 @@ autocmd VimLeave * :!echo "ok"
 lua <<EOF
  print("Hello user! Welcome to Neovim!")
 EOF
+
+
+" Options
+""https://dev.to/elvessousa/my-basic-neovim-setup-253l
+set background=dark
+set clipboard=unnamedplus
+set completeopt=noinsert,menuone,noselect
+set cursorline
+set hidden
+set inccommand=split
+set mouse=a
+set number
+" set relativenumber
+set splitbelow splitright
+set title
+set ttimeoutlen=0
+set wildmenu
+
+" Tabs size
+set expandtab
+set shiftwidth=2
+set tabstop=2
+set t_Co=256
+" Italics
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+let g:netrw_altv=1
