@@ -1,5 +1,6 @@
 
 #alias v="nvim -c 'so ~/.vimrc' "
+alias fdi="fd -H -I"
 alias d2u="dos2unix"
 alias di="docker image ls"
 alias sell="echo $0"

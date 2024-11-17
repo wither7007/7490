@@ -19,10 +19,6 @@ curl ifconfig.me
 fdh(){
 /usr/bin/fdfind --help | nvim 
 }
-fdi(){
-fd  -H -I
-}
-
 fdm(){
   fd -H -I --ignore-file ~/.fdignore
 }
