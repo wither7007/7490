@@ -1,8 +1,0 @@
-
-recf() {
-  fdm --changed-within="$1"days | xargs ls -lhrt | awk '{ print $9 " " $6 " " $7 " " $8}' | tac | sort >/mnt/c/projects/left.txt
-}
-
-recv() {
-  fdm --changed-within="$1"days | xargs ls -lhrt | awk '{ print $9 " " $6 " " $7 " " $8}' | tac | sort | nvim -
-}
