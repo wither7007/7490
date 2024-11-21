@@ -1,0 +1,176 @@
+echo "/mnt/c" | sed -e 's/c:'
+echo "a" | sed 's/s/x'
+echo  "version: '2.1.0-beta.12'," | sed -En "s/version: '(.*)',/\1/p"
+echo "a" | sed -En 's/s/x'
+echo "a" | sed -En "s/a/x"
+echo AAXXAAYYBB | sed 's/[AB]/C/g'
+echo "a" | sed -En "s/a/x/g"
+echo "a" | sed - "s/a/x/g"
+echo "a" | sed  "s/a/x/g"
+echo "/mnt" | sed  "s/mnt/c/"
+echo "/mnt" | sed  "s/mnt/c:/"
+echo "/mnt" | sed  "s/\/mnt/c:/"
+echo "/mnt" | sed  "s.\/mnt.c:/"
+echo a | sed "s|a|b"
+echo a | sed "s|a|b|g"
+echo /mnt | sed "s|/mnt|c:\|g"
+echo /mnt | sed "s|/mnt|c:\\|g"
+echo /mnt | sed "s|\/mnt|c:\\|g"
+echo /mnt | sed "s|m|c:\\|g"
+echo /mnt | sed "s|m|xxx|g"
+seq 42 | sed -n '/0$/!d; n; N; s/\n/ /p'
+echo "$a" | sed 'y|/\\|\\/|'
+pwd| sed 'y|/\\|\\/|' | sed 'y|\mnt|x|'
+pwd| sed 'y|/\\|\\/|' | sed 's|\mnt|x|'
+pwd| sed 'y|/\\|\\/|' | sed 's|\mnt\\c|x|'
+pwd| sed 'y|/\\|\\/|' | sed 's|\mnt\c|c:\\|'
+pwd| sed 'y|/\\|\\/|'
+pwd| sed 'y|/\\|\\/|' | sed 's|\mnt\\c|c:\\|'
+pwd| sed 'y|/\\|\\/|' | sed 's|\\mnt\\c|c:\|'
+pwd| sed 'y|/\\|\\/|' | sed 's|\\mnt\\c|c:\\|'
+pwd | sed '/mnt/c|xxx|g'
+pwd | sed '/mnt/c|xxx'
+ls | sed '10q'
+pwd | sed '///'
+pwd | sed '///g'
+pwd | sed 's///g'
+pwd | sed 's/a/b/g'
+pwd | sed 'y|/\\|\\/|'
+pwd sed 's.\\./.g'
+pwd | sed 's.\\./.g'
+pwd | sed 's.mnt./.g'
+pwd | sed 's.mnt/./.g'
+pwd | sed 's.mnt/.\.g'
+pwd | sed 's.mnt/.\\.g'
+pwd | sed 's.mnt//.\\.g'
+pwd | sed 's.mnt://.\\.g'
+echo "C:\Windows\Folder\File.txt" | sed -e 's.\\/.//g'
+echo 'C:\foo\bar.xml' | sed 's.\\./.g'
+echo 'C:\foo\bar.xml' | sed 's/\\/\//g'
+echo 'C:\foo\bar.xml' | sed 's.x.nn.g'
+printf "%s\n"  'c:\foo' | sed 's.f.x.g'
+printf "%s\n"  'c:\foo' | sed 's.\.x.g'
+printf "%s\n"  'c:\foo' | sed 's.\\.x.g'
+printf "%s\n"  'c:\foo' | sed 's.\\./.g'
+printf "%s\n"  $(pwd) | sed 's.\\./.g'
+printf "%s\n"  $(pwd) | sed 's.\/.\.g'
+echo "My favorite programming editor is Emacs. Another editor I like is Vim." | sed -e s/editor/tool/g\nMy favorite programming tool is Emacs. Another tool I like is Vim.  
+echo "foo" | sed -e 's/foo/bar/' -e 's/bar/foo/'echo "foo" | sed -e 's/foo/bar/' -e 's/bar/foo/'
+echo "foo" | sed -e 's/foo/bar/' -e 's/bar/foo/'
+cd Grep\ Sed\ Awk
+mv ''\''Sed'\'' command #1.sh 1
+e // | sed 's./.x/'
+e // | sed 's./.x/g'
+e // | sed 's.//.x/g'
+e a | sed 's.a.b.g'
+e // | sed 's.//.x.g'
+e // | sed 's.//.\.g'
+e // | sed 's.//.\\.g'
+pwd | sed 's.//.\\.g'
+pwd | sed 's.//..g'
+pwd | sed 's.///..g'
+pwd | sed 's./..g'
+pwd | sed 's./.\\\.g'
+pwd | sed 's././\.g'
+pwd | sed 's./.\.g'
+pwd | sed 's./.x.g'
+pwd | sed 's./.\x.g'
+pwd | sed 's./.\\.g'
+pwd | sed 's.\.//.g'
+pwd | sed 's./\.//.g'
+pwd | sed 's./\.x.g'
+pwd | sed 's.\.x.g'
+pwd | sed 's.\\\.x.g'
+pwd | sed 's.\\.x.g'
+pwd | sed 's.\/.x.g'
+pwd | sed 's.\/. x .g'
+pwd | sed 's.\/. x/ .g'
+pwd | sed 's.\/./ .g'
+pwd | sed 's.\/./.g'
+pwd | sed 's.\/\/mnt./.g'
+pwd | sed 's.\/mnt./.g'
+v psed
+pwd | sed 's/\\/mnt\\/c/c:\\/gm;t'
+pwd | sed 's/\\/mnt\\/c/c:\\/gm'
+sed -E 's/\\/mnt\\/c/c:\\/gm;t' <<< "/mnt/c"
+pwd | sed 's.\/mnt\/c.c.g'
+wind(){\n  #convert bash path to windows\npwd | sed 's.\/mnt\/c.c:.g' |clip\n}\n
+wind(){\n  #convert bash path to windows\npwd | sed 's.\/mnt\/c.c:.g' |clip.exe\n}\n
+pwd | sed 's.\/mnt\/c.c:.g'
+pwd | sed 's.\/mnt\/c..g'
+pwd | sed 's.\/mnt\/\/c..g'
+echo  "C:\Users\San.Tan\My Folder\project1" | sed -e 's/C:\\/mnt\/c\//;s/\\/\//g'
+printf "%s\n"  $(pwd) | sed 's.\/.\\.g'
+printf "%s\n"  $(pwd) | sed 's.\/.\\.g' | sed 's.mnt..g
+printf "%s\n"  $(pwd) | sed 's.\/.\\.g' | sed 's.mnt..g'
+echo "//s3.amazonaws.com/umdheader.umd.edu/app/js/main.min.js" | sed 's#^//##'
+echo "//s3.amazonaws.com/umdheader.umd.edu/app/js/main.min.js" | sed 's#^..##'
+echo "x//s3.amazonaws.com/umdheader.umd.edu/app/js/main.min.js" | sed 's#^..##'
+echo "/home/user" | sed 's#/#\\#g
+echo "/home/user" | sed 's#/#\\#g"
+echo "/home/user" | sed 's#/#\\#g'
+find . -name '*.py' -type f -print0 | sed 's/\x0/\n/g' | grep -i "$1"
+find . -name '*.py' -type f  | sed 's/\x0/\n/g' | grep -i "$1"
+LC_ALL=C sed -e 's/[^a-zA-Z0-9,._+@%/-]/\\&/g; 1{$s/^$/""/}; 1!s/^/"/; $!s/$/"/'.
+LC_ALL=C sed -e 's/[^a-zA-Z0-9,._+@%/-]/\\&/g; 1{$s/^$/""/}; 1!s/^/"/; $!s/$/"/'
+for i in {0..127}; do\n    printf -v var %02X $i\n    printf -v var %b \\x$var\n    sign=E\n    printf -v res %q "$var"\n    [[ $var == "$res" ]] && sign=-\n    printf '%02X %s %-*s %-*s\n' $i $sign $(( 31 < i && i < 96 ? 2 : 8\n        )) "${res}" $(( 31 < i && i < 96 ? 3 : 8)) "${var@Q}"\ndone |\n    pr -w100 --sep-string='' -t4 |\n    sed 's/\o11\+/\o11/g'
+myc() {\n  cd /mnt/c\n}\nmpath(){\nwslpath -w $(pwd) | clip.exe\n}\nmyip(){\ncurl ifconfig.me\n}\nfdh(){\n  /usr/bin/fdfind --help | nvim \n}\nfdm(){\n  fd -H -I --ignore-file ~/.fdignore\n}\nwind(){\n  #convert bash path to windows\npwd | sed 's.\/mnt\/c.c:.g' |clip.exe\n}\n
+echo "\\" | sed 's.\\.z'
+echo "\\" | sed 's.\\.'
+sed 's.\/mnt\/c.c\:.' | sed 's.\/.\\.g'
+echo "/mnt/c" | sed -e 's/c:\\'
+echo "x" | sed 's.x.y'
+echo "x" | sed 's.x.y.'
+sed
+echo "c:/Project/test" \\n| sed -E 's/^(\w+)+/\L\1/g' \\n| sed -e 's/\\/\//g' \\n| sed -e 's/://g' \\n| sed -e '/^\//!s/^/\//g'
+sed 's. ..g.' ./Git Rebase in any JetBrains IDE [wiU3TL3jM8I].webm
+sed 's/ //g.' ./Git Rebase in any JetBrains IDE [wiU3TL3jM8I].webm
+sed 's/a //g.' 'a'
+sed 's/a //g' 'a'
+sed 's.\/mnt\/c.c\:.'
+sed 's.a.a.b.g'
+sed 's/a/a/b'
+echo "/mnt" | sed  "s|\/mnt|c:/"
+pwd| sed 'y|/\\|\\/|' | sed 'y|\mnt|x'
+echo "C:\Windows\Folder\File.txt" | sed -e 's/\\/\//g'
+echo "a" | sed  "s/a/x/"
+fd 6 | sed 's/ \+/ /g'
+fd 6 | sed 's/ \+/_/g'
+fd 6 | sed 's/\[/_/g'
+fd 6 | sed 's/\[.*\]/_/g'
+fd 6 | sed 's/\[.*\]//g'
+fd 6 | sed 's/\[.*\]//g' | sed 's/\s+/_/g'fd 6 | sed 's/\[.*\]//g' | sed 's/\s+/_/g'
+fd 6 | sed 's/\[.*\]//g' | sed 's/\s+/_/g'
+fd 6 | sed 's/\s+/_/g'
+fd 6 | sed 's//_/g'
+text1="This is a test text to       show how to remove     multi spaces using sed     in Linux"\necho "$text1" | sed 's/[ ]\+/ /g'
+sed 's/[]\+/ /g'
+echo "text1" sed 's/[]\+/ /g'
+fd 6 | sed 's/\s\+/_/g'
+fd 6 | sed 's/\s\+/_/g' |  sed 's/\[.*\]//g'
+fd 6 | sed 's/[^[:print:]]//'
+echo "Â10.41.89.50 " | sed "s/[[:alpha:].-]//g"
+fd 6 | sed 's/\s\+/_/g' |  sed 's/\[.*\]//g'| sed "s/[[:alpha:].-]//g"
+fd 6 | sed 's/\s\+/_/g' |  sed 's/\[.*\]//g'| sed "s/'^[a-z]//g'
+fd 6 | sed 's/\s\+/_/g' |  sed 's/\[.*\]//g'| sed 's/'^[a-z]//g'
+fd 6 | sed 's/\s\+/_/g' |  sed 's/\[.*\]//g'| sed 's/^[a-z]//g'
+ls sed [^a-zA-Z0-9]
+ls | sed [^a-zA-Z0-9]
+ls | sed 's/[^a-zA-Z0-9]//g'
+ls | sed 's/[^a-zA-Z0-9]/ /g'
+ls | sed 's/[^a-zA-Z0-9]/_/g'
+v sed
+echo 'aaa' | sed 's/a/x/g'
+echo 'aaa' | sed 's/a+/x/g'
+echo "abc,,,def" | sed 's/,/|/g'
+ls | sed 's/ \{1,\}/ /g'
+ls | sed 's/_{1,\}/_/g'
+ls | sed 's/_{1,\}//g'
+ls | sed 's/_/x/g'
+ls | sed 's/_{1,\}/x/g'
+ls | sed 's/_{1,}/x/g'
+ls | sed 's/_{1,50}/x/g'
+ls | sed 's/_+//g'
+ls | sed 's/_//g'
+ls | sed 's/_{2,}//g'
+ls | sed 's/_{2,}/x/g'

@@ -13,6 +13,7 @@ noremap <leader>n :enew
 vnoremap <leader>b "_x
 noremap <leader>m gg:%s///
 noremap <leader>; v$y
+noremap <leader>s :suspend<cr>
 
 let g:user_emmet_leader_key=','
 "https://dev.to/elvessousa/my-basic-neovim-setup-253l
@@ -24,6 +25,7 @@ let g:netrw_winsize=25
 let g:netrw_keepdir=0
 let g:netrw_localcopydircmd='cp -r'
 " Create file without opening buffer
+au BufWritePre /tmp/* setlocal noundofile
 function! CreateInPreview()
   let l:filename = input('please enter filename: ')
   execute 'silent !touch ' . b:netrw_curdir.'/'.l:filename

@@ -8,10 +8,23 @@ export FZF_DEFAULT_COMMAND='fd . -tf -d 1 '
 #  printf '%s\n' "fd  -H -I "
 #  fd  -H -I
 #}
-myc() {
+
+dockers(){
+docker ps -a
+}
+dstop(){
+docker stop "$(docker ps -a -q)"
+}
+
+fdf() {
+fd -tf -d1 | column
+}
+mc(){
 cd /mnt/c || exit
 }
-mpath(){
+wpath(){
+printf '%s\n' "wslpath -w "$(pwd)" | clip.exe"
+wslpath -w "$(pwd)" 
 wslpath -w "$(pwd)" | clip.exe
 }
 myip(){
@@ -23,18 +36,11 @@ fdh(){
 fdm(){
   fd -H -I --ignore-file ~/.fdignore
 }
-wind(){
-  #convert bash path to windows
-pwd | sed 's.\/mnt\/c.c:.g' |clip.exe
-}
 gitfiles(){
 git ls-files
 }
 listen(){
 netstat -tulpn | grep LISTEN
-}
-dstop(){
-docker stop "$(docker ps -a -q)"
 }
 wslp(){
 wslpath -w "$PWD" | clip.exe
@@ -79,11 +85,6 @@ pgrep node | xargs kill -9
 jser()
 {
 fdm -ejs | xargs -r rg -i --max-count 2 "$1"
-}
-house()
-{
-cd /mnt/c/projects/house/ || exit
-nvim /mnt/c/projects/house/todos.txt
 }
 
 gitweb()
@@ -398,7 +399,4 @@ mkcd() {
 }
 
 
-h(){
-  history 1 |tac |cut -c 1-7 --complement | nvim -
-}
 export PATH=$PATH:/home/steff007/.local/bin
