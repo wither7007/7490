@@ -22,7 +22,6 @@ alias down="cd /mnt/c/Users/jimst/Downloads"
 alias duh='du -h --max-depth=1'
 alias e='echo $?'
 alias ehis="v $(echo $HISTFILE)"
-alias f1='fd --changed-within 2day'
 alias fda="fd -tf -I -d 1 -a --no-ignore-vcs "
 alias fdc="fd -H -I -d 1  -td | column"
 alias fdf="fd -H -I -d 1  -tf | column"
@@ -65,7 +64,7 @@ alias h3="history | tail -n 30 | tac | nl | tac"
 alias h5='history | tail -n 50'
 alias hi='history'
 #nvim -c "normal Gzz" ~/pys/ipy_linux3
-alias his='hi |  cut -c 1-7 --complement | nvim -c "normal Gzz"  -'
+alias h='hi |  cut -c 1-7 --complement | nvim -c "normal Gzz"  -'
 alias hist='hi |  cut -c 1-7 --complement > ~/hist'
 alias hn='hi | nvim -'
 alias hp="hyperfine "
@@ -186,4 +185,3 @@ alias '....'='cd ../../..'
 alias '.....'='cd ../../../..'
 alias 'rename'='/usr/bin/prename.pl'
 alias 'lfi'='v ~/.config/lf/lfrc'
-alias 'tf=type -f h'

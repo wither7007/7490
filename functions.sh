@@ -9,6 +9,12 @@ export FZF_DEFAULT_COMMAND='fd . -tf -d 1 '
 #  fd  -H -I
 #}
 
+tf(){
+  type -f "$1"
+}
+untrack(){
+  git ls-files --others --exclude-standard
+}
 dockers(){
 docker ps -a
 }
@@ -51,7 +57,7 @@ dr(){
 all(){
   cd /mnt/c/all || exit
 }
-h(){
+h20(){
   history 1  |cut -c 1-7 --complement | tail -n20
 }
 hst()
@@ -124,11 +130,6 @@ wpwd() {
 
 }
 
-wone() {
-  #takes linux file and clips window path
-  echo "$1" | sed 's.\/mnt\/c.c\:.' | sed 's.\/.\\.g' | cl
-  echo "$1" | sed 's.\/mnt\/c.c\:.' | sed 's.\/.\\.g' 
-}
 bigGit() {
   #crazy function to find big git commit
 git rev-list --objects --all |\n  git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' | sed -n 's/^blob //p' | sort --numeric-sort --key=2 | cut -c 1-12,41- | $(command -v gnumfmt || echo numfmt) --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest 
@@ -260,8 +261,13 @@ cputest() {
 }
 
 f2() {
-  echo "fd -a -tf --ignore-file ~/.fdignore --changed-within 2d | xargs -r ls -lhrt| more"
-  fd -I -a -tf --ignore-file ~/.fdignore --changed-within 2d | xargs -r ls -lhrt| more
+  echo "fd -a -tf --ignore-file ~/.fdignore --changed-within 2d | xargs -r ls -lhrt"
+  fd -I -a -tf --ignore-file ~/.fdignore --changed-within 2d | xargs -r ls -lhrt
+}
+
+f1() {
+  echo "fd -a -tf --ignore-file ~/.fdignore --changed-within 1d | xargs -r ls -lhrt"
+  fd -I -a -tf --ignore-file ~/.fdignore --changed-within 1d | xargs -r ls -lhrt
 }
 wind() {
   fdi --ignore-file ~/.fdignore -a -d 2 "$1" | sed 's|\/mnt\/c|c\:|' | sed 's|\/|\\|g' | nvim -
